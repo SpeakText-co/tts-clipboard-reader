@@ -12,7 +12,7 @@ class Overlay:
         if self.root is not None:
             return
         self.root = tk.Tk()
-        self.root.attributes('-topmost', True, '-fullscreen', True, '-alpha', 0.3)
+        self.root.attributes('-topmost', True, '-fullscreen', True, '-alpha', 0.1)
         self.root.configure(bg='black')
         tk.Label(self.root, text="Speaking…", fg="white", bg="black", font=("Arial", 48)).pack(expand=True)
         # auto‑destroy after 2s
