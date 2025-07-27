@@ -15,6 +15,9 @@ class App:
         self.last_clipboard = ""
         self.ui = ControlUI(self)
 
+    def update_settings(self, settings):
+        self.speech.set_settings(settings)
+
     def start(self):
         # Start asyncio + input listener in background thread
         threading.Thread(target=self._start_async_parts, daemon=True).start()
